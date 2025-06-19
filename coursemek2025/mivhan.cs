@@ -7,8 +7,10 @@ using System.Security.Cryptography.X509Certificates;
 public class Calc
 {
     private static char[] Peolot = new char[] { '!', '^', '*', '/', '+', '%' };
-    private static char[] Digits = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9','.','e','-'};
+    private static char[] Digits = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9','.','e','-','p'};
     private static char[] Brackets = new char[] { '(', ')' };
+
+    private static string[] Func = new string[] { };
     public static void Main()
     {
 
@@ -26,10 +28,18 @@ public class Calc
             if (input[i] == ' ') continue;
             else if (input[i] == '-')
             {
-                if (Char.IsDigit(arr[arr.Count - 1])) arr.Add('+');
-                arr.Add('-');
+                if (arr[arr.Count - 1] == '-') arr.RemoveAt(arr.Count - 1);
+                else if (Digits.Contains(arr[arr.Count - 1])) { arr.Add('+'); arr.Add('-'); }
+                else arr.Add('-');
+            }
+            else if (input[i] == '+')
+            {
+                if (arr[arr.Count - 1] == '+' || arr[arr.Count - 1] == '-') continue;
+                else if (!Digits.Contains(arr[arr.Count - 1])) continue;
+                else arr.Add('+');
             }
             else arr.Add(input[i]);
+
         }
         try
         {
@@ -93,7 +103,7 @@ public class Calc
     }
 
     private static string EvaluteExpression(List<char> expr,int numSteps)
-    {
+    {  
         bool flag = false;
         List<char> cur_arr = new List<char> { };
         int lb = 0;
@@ -145,7 +155,7 @@ public class Calc
                                     List<char> tmp_arr = new List<char> { };
                                     for (int j = 0; j < tmpl; j++) tmp_arr.Add(cur_arr[j]);
                                     foreach (char a in ans) tmp_arr.Add(a);
-                                    i = tmp_arr.Count;
+                                    i = tmp_arr.Count-1;
                                     for (int j = tmpr + 1; j < n; j++) tmp_arr.Add(cur_arr[j]);
                                     cur_arr = tmp_arr;
                                 }
@@ -155,7 +165,7 @@ public class Calc
                         for (int j = 0; j < lb; j++) tmp_exp.Add(expr[j]);
                         foreach (char ch in cur_arr) tmp_exp.Add(ch);
                         int lr = idx;
-                        idx = tmp_exp.Count;
+                        idx = tmp_exp.Count-1;
                         for (int j = lr + 1; j < expr.Count; j++) tmp_exp.Add(expr[j]);
                         expr = tmp_exp;
                     }
