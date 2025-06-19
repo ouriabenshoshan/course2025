@@ -6,8 +6,8 @@ using System.Security.Cryptography.X509Certificates;
 
 public class Calc
 {
-    private static char[] Peolot = new char[] { '!', '^', '*', '/', '+', '-', '%' };
-    private static char[] Digits = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9','.','e'};
+    private static char[] Peolot = new char[] { '!', '^', '*', '/', '+', '%' };
+    private static char[] Digits = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9','.','e','-'};
     private static char[] Brackets = new char[] { '(', ')' };
     public static void Main()
     {
@@ -20,19 +20,23 @@ public class Calc
             return;
         }
         input = "(" + input + ")";
-        string[] sarr = input.Split(" ");
         List<char> arr = new List<char>();
-        foreach (string s in sarr)
+        for (int i = 0; i < input.Length; i++)
         {
-            char[] chars = s.ToCharArray();
-            foreach (char c in chars) arr.Add(c);
+            if (input[i] == ' ') continue;
+            else if (input[i] == '-')
+            {
+                if (Char.IsDigit(arr[arr.Count - 1])) arr.Add('+');
+                arr.Add('-');
+            }
+            else arr.Add(input[i]);
         }
         try
         {
             (bool ret_bo, int ret_in) = isOkForm(arr);
             if (ret_bo)
             {
-                Console.WriteLine($"your expression is equale to {EvaluteExpression(arr,ret_in)}");
+                Console.WriteLine($"your expression is equale to {EvaluteExpression(arr, ret_in)}");
             }
         }
         catch (Exception ex)

@@ -8,32 +8,24 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\bigo\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bigo\\projects_vsc\\course2025\\coursemek2025\\coursemek2025.csproj",
+      "projectUniqueName": "C:\\Users\\User\\vsc_projects\\coursemeklaptop\\course2025\\coursemek2025\\coursemek2025.csproj",
       "projectName": "coursemek2025",
-      "projectPath": "C:\\Users\\bigo\\projects_vsc\\course2025\\coursemek2025\\coursemek2025.csproj",
-      "packagesPath": "C:\\Users\\bigo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bigo\\projects_vsc\\course2025\\coursemek2025\\obj\\",
+      "projectPath": "C:\\Users\\User\\vsc_projects\\coursemeklaptop\\course2025\\coursemek2025\\coursemek2025.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\vsc_projects\\coursemeklaptop\\course2025\\coursemek2025\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\bigo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
