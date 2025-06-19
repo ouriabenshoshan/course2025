@@ -12,3 +12,4 @@ C:\Users\bigo\projects_vsc\course2025\coursemek2025\obj\Debug\net9.0\refint\cour
 C:\Users\bigo\projects_vsc\course2025\coursemek2025\obj\Debug\net9.0\coursemek2025.pdb
 C:\Users\bigo\projects_vsc\course2025\coursemek2025\obj\Debug\net9.0\coursemek2025.genruntimeconfig.cache
 C:\Users\bigo\projects_vsc\course2025\coursemek2025\obj\Debug\net9.0\ref\coursemek2025.dll
+C:\Users\bigo\projects_vsc\course2025\coursemek2025\obj\Debug\net9.0\coursemek2025.sourcelink.json
